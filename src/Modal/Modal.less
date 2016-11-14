@@ -1,0 +1,90 @@
+@import (reference) '../common.less';
+
+.modal
+{
+    -moz-osx-font-smoothing : grayscale;
+    -webkit-font-smoothing : antialiased;
+
+    div { box-sizing:border-box; }
+}
+
+.content
+{
+    border-radius    : 8px;
+    background-color : white;
+    margin-bottom    : 50px;
+    width            : 564px;
+}
+
+.header
+{
+    .FontLight();
+    box-sizing:border-box;
+    min-height      : 60px;
+    padding         : 16px 18px;
+    padding-left    : 30px;
+    font-weight     : normal;
+    font-size       : 20px;
+    color           : white;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    border-radius   : 8px 8px 0px 0px;
+}
+
+.close
+{
+    width            : 25px;
+    height           : 25px;
+    border-radius    : 50%;
+    border           : none;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    background-color : rgba(red(@D10), green(@D10), blue(@D10), 0.2);
+    cursor           : pointer;
+}
+
+.close:hover, .close:focus {
+    background-color : rgba(red(@D10), green(@D10), blue(@D10), 0.4);
+}
+
+.close > svg {
+    margin-top : 1px;
+    path { stroke: #fff; }
+}
+
+.body
+{
+    .FontRoman();
+    padding   : 30px;
+    color     : @paletteD2;
+    font-size : 16px;
+
+    .footer {
+        padding : 0px;
+    }
+}
+
+.footer
+{
+    padding     : 30px;
+    padding-top : 4px;
+    display     : flex;
+    align-items : center;
+}
+
+.footerbuttons
+{
+    margin-left : auto;
+}
+
+.footerbuttons>button:first-of-type {
+    margin-right : 10px;
+}
+
+.modal.red .header         { background-color: @paletteR1 }
+.modal.blue  .header       { background-color: @paletteB1 }
+.modal.green .header       { background-color: @paletteG1 }
+.modal.lightGreen .header  { background-color: @paletteG2 }
+

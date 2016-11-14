@@ -1,0 +1,98 @@
+@import (reference) '../common.less';
+
+.wrapper > label {
+    display: flex;
+    cursor: pointer;
+}
+
+.wrapper > input
+{
+    display:none;
+}
+
+:global(.rtl) .wrapper > label {
+    flex-direction: row-reverse;
+}
+
+.checkbox {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border: 1px solid @B10;
+    border-radius: 4px;
+    box-sizing:border-box;
+}
+
+.checkbox>.inner {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    color: @D80;
+}
+
+.checkbox>.inner>svg {
+    width:9px;
+    height:9px;
+}
+
+.checkbox>.inner>svg>path {
+    fill:#fff;
+}
+
+:global(.ltr) .children {
+    padding-left:5px;
+}
+
+:global(.rtl) .children {
+    padding-right:5px;
+}
+
+/* Checked State */
+
+.wrapper.checked .checkbox {
+    background-color: @B10;
+}
+
+.wrapper.checked .checkbox >.inner {
+    opacity: 1;
+}
+
+/* Unchecked State */
+
+.wrapper.unchecked .checkbox {
+    background-color: @D80;
+}
+
+.wrapper.unchecked .checkbox > .inner {
+    opacity: 0;
+}
+
+.wrapper.unchecked:hover .checkbox, .wrapper.unchecked.hover .checkbox {
+    background-color: @B40;
+}
+
+.wrapper.unchecked:active .checkbox, .wrapper.unchecked.active .checkbox {
+    background-color: @B20;
+}
+
+.wrapper.unchecked:active .checkbox>.inner, .wrapper.unchecked.active .checkbox>.inner {
+    opacity: 1;
+}
+
+/* Dsiabled State */
+
+.wrapper.disabled .checkbox, .wrapper.disabled:hover .checkbox, .wrapper.disabled.hover .checkbox, 
+.wrapper.disabled.active .checkbox, .wrapper.disabled:active .checkbox {
+    border-color: @GR20;
+    background-color: @GR30;
+}
+
+.wrapper.disabled.checked .checkbox, .wrapper.disabled.checked:hover .checkbox, .wrapper.disabled.checked.hover .checkbox, 
+.wrapper.disabled.checked.active .checkbox, .wrapper.disabled.checked:active .checkbox {
+    background-color: @GR20;
+}

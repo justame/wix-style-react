@@ -1,0 +1,167 @@
+@import (reference) '../common.less';
+
+/******* BASIC DEFINITIONS *****/
+.input
+{
+    border: none;
+    height: 38px;
+    position:relative;
+}
+
+.input>input
+{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0px 12px;
+    .FontRoman();
+    font-size: 16px;
+
+    border: solid 1px @B30;
+    background-color: @D80;
+    color: @D10;
+    line-height: 24px;
+
+    &::-webkit-input-placeholder { color: @paletteE6; }
+    &:-moz-placeholder { color: @paletteE6; }
+    &::-moz-placeholder { color: @paletteE6; }
+    &:-ms-input-placeholder { color: @paletteE6; }
+
+    &::selection { background: @paletteB4; }
+    &::-moz-selection { background: @paletteB4; }
+
+    &:hover, &.hover {
+        background-color: @B50;
+    }
+
+    &:focus, &.focus {
+        background-color: @D80;
+        outline: 0;
+        border-color: @B20;
+        border-width: 1px;
+        box-shadow: inset 0px 0px 5px 0px fade(@B10, 60%);
+    }
+}
+
+/******* UNIT *****/
+
+:global(.ltr) .inputWithUnit>input
+{
+    padding-right:44px;
+}
+
+:global(.rtl) .inputWithUnit>input
+{
+    padding-left:44px;
+}
+
+.inputWithUnit>.unit {
+    user-select : none;
+
+    background-color : transparent;
+    color            : @paletteD3;
+    .FontLight();
+    position         : absolute;
+    top              : 20px;
+    transform        : translateY(-50%);
+    z-index          : 1;
+}
+
+:global(.ltr) .inputWithUnit .unit {
+    right : 12px;
+    padding-left : 12px;
+}
+
+:global(.rtl) .inputWithUnit .unit {
+    left : 12px;
+    padding-right : 12px;
+}
+
+.inputWithUnit>.unit:before {
+    content      : '';
+    height       : 18px;
+    position     : absolute;
+    top          : 50%;
+    transform    : translateY(-50%);
+}
+
+:global(.ltr) .inputWithUnit>.unit:before {
+    border-left : 1px solid @paletteB4;
+    left        : 0px;
+}
+
+:global(.rtl) .inputWithUnit>.unit:before {
+    border-right : 1px solid @paletteB4;
+    right        : 0px;
+}
+
+.inputWithUnit>.unit:hover {
+    cursor : text;
+    + input {
+        background-color: @paletteB5;
+    }
+}
+
+/******* ERROR *****/
+
+.input.error:after {
+    top: 7px;
+    END: 8px;
+    display:block;
+}
+
+.input.error > input {
+    border-color: @R10 !important;
+    padding-END: 36px;
+    border-width: 1px;
+    box-shadow: inset 0px 0px 5px 0px fade(@R10, 60%);
+}
+
+.input.error > svg {
+    display:block;
+    position: absolute;
+    top: 7px;
+    z-index: 2;
+    background-color: @paletteR1;
+    padding:7px 12px;
+    width:2px;
+    border-radius:50%;
+    box-sizing: content-box;
+
+    >path {
+        stroke: #fff;
+    }
+}
+
+:global(.ltr) .input.error > svg {
+    right:8px;
+}
+
+:global(.rtl) .input.error > svg {
+    left:8px;
+}
+
+/******* ERROR + UNIT *******/
+
+:global(.ltr) .inputWithUnit.error>.unit:before {
+    border-left : 1px solid @paletteR1 !important;
+}
+
+:global(.rtl) .inputWithUnit.error>.unit:before {
+    border-right : 1px solid @paletteR1 !important;
+}
+
+:global(.ltr) .inputWithUnit.error>svg {
+    display:block;
+    right:55px;
+}
+
+:global(.rtl) .inputWithUnit.error>svg {
+    display:block;
+    left:55px;
+}
+

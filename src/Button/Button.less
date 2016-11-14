@@ -1,0 +1,188 @@
+@import (reference) '../common.less';
+
+.button {
+    .FontRoman();
+    font-size: 14px;
+
+    box-sizing:border-box;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 15px;
+    height: 30px;
+    padding: 6px 24px;
+    text-align: center;
+    border: 1px solid;
+    cursor: pointer;
+    outline: none;
+}
+
+.button.disabled
+{
+    pointer-events:none;
+    background-color: @GR10 !important;
+    border-color: @GR10 !important;
+    color: #fff !important;
+}
+
+.fullblue
+{
+    background-color: @B10;
+    border-color: @B10;
+    color: #fff;
+}
+
+.fullblue:hover, .fullblue.hover
+{
+    background-color: @paletteB2;
+    border-color: @paletteB2;
+}
+
+.fullblue:active, .fullblue.active
+{
+    background-color: @B00;
+    border-color: @B00;
+    color: #fff;
+}
+
+.emptyblue
+{
+    background-color: #fff;
+    border-color: #5babef;
+    color: #3899ec;
+}
+
+.emptyblue:hover, .emptyblue.hover
+{
+    background-color: @paletteB2;
+    border-color: @paletteB2;
+    color: #fff;
+}
+
+.emptyblue:active, .emptyblue.active
+{
+    background-color: @B10;
+    border-color: @B10;
+    color: #fff;
+}
+
+.fullpurple
+{
+    background-color: @P10;
+    border-color: @P10;
+    color: #fff;
+}
+
+.fullpurple:hover, .fullpurple.hover
+{
+    background-color: @P20;
+    border-color: @P20;
+}
+
+.fullpurple:active, .fullpurple.active
+{
+    background-color: @P00;
+    border-color: @P00;
+    color: #fff;
+}
+
+.emptypurple
+{
+    background-color: #fff;
+    border-color: @P10;
+    color: @P10;
+}
+
+.emptypurple:hover, .emptypurple.hover
+{
+    background-color: @P20;
+    border-color: @P20;
+    color: #fff;
+}
+
+.emptypurple:active, .emptypurple.active
+{
+    background-color: @P00;
+    border-color: @P00;
+    color: #fff;
+}
+
+.fullgreen
+{
+    background-color: @G10;
+    border-color: @G10;
+    color: #fff;
+}
+
+.fullgreen:hover, .fullgreen.hover
+{
+    background-color: @G20;
+    border-color: @G20;
+}
+
+.fullgreen:active, .fullgreen.active
+{
+    background-color: @G00;
+    border-color: @G00;
+    color: #fff;
+}
+
+.emptygreen
+{
+    background-color: #fff;
+    border-color: @G10;
+    color: @G10;
+}
+
+.emptygreen:hover, .emptygreen.hover
+{
+    background-color: @G20;
+    border-color: @G20;
+    color: #fff;
+}
+
+.emptygreen:active, .emptygreen.active
+{
+    background-color: @G00;
+    border-color: @G00;
+    color: #fff;
+}
+
+.fullred
+{
+    background-color: @R10;
+    border-color: @R10;
+    color: #fff;
+}
+
+.fullred:hover, .fullred.hover
+{
+    background-color: @R20;
+    border-color: @R20;
+}
+
+.fullred:active, .fullred.active
+{
+    background-color: @R00;
+    border-color: @R00;
+    color: #fff;
+}
+
+.emptyred
+{
+    background-color: #fff;
+    border-color: @R10;
+    color: @R10;
+}
+
+.emptyred:hover, .emptyred.hover
+{
+    background-color: @R20;
+    border-color: @R20;
+    color: #fff;
+}
+
+.emptyred:active, .emptyred.active
+{
+    background-color: @R00;
+    border-color: @R00;
+    color: #fff;
+}
