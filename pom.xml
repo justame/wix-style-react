@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <groupId>com.wixpress.restaurants</groupId>
-    <artifactId>wix-restaurants-renderer-js</artifactId>
-    <name>Wix Restaurants Renderer Js</name>
-    <description>Wix Restaurants Oy-Vey based rendering components for orders and reservations</description>
+    <artifactId>wix-style-react</artifactId>
+    <name>Wix Style React</name>
+    <description>Common React UI components for all Wix verticals developing in React</description>
 
     <parent>
         <groupId>com.wixpress.common</groupId>
@@ -23,6 +23,13 @@
         <developer>
             <name>Yoav Amit</name>
             <email>yoava@wix.com</email>
+            <roles>
+                <role>owner</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Shahar Talmi</name>
+            <email>shahart@wix.com</email>
             <roles>
                 <role>owner</role>
             </roles>
