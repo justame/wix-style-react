@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.wixpress.restaurants</groupId>
+    <artifactId>wix-restaurants-renderer-js</artifactId>
+    <name>Wix Restaurants Renderer Js</name>
+    <description>Wix Restaurants Oy-Vey based rendering components for orders and reservations</description>
+
+    <parent>
+        <groupId>com.wixpress.common</groupId>
+        <artifactId>wix-master-parent</artifactId>
+        <version>100.0.0-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <version>1.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	
+    <developers>
+        <developer>
+            <name>Yoav Amit</name>
+            <email>yoava@wix.com</email>
+            <roles>
+                <role>owner</role>
+            </roles>
+        </developer>
+    </developers>	
+</project>
