@@ -1,6 +1,5 @@
 import React from 'react';
-import Modal from '../src/Modal/Modal.js';
-import Button from '../src/Button/Button.js';
+import {Button, Modal} from '../src/index.js';
 
 class ModalStory extends React.Component {
 

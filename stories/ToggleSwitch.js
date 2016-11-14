@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleSwitch from '../src/ToggleSwitch/ToggleSwitch.js';
+import {ToggleSwitch} from '../src/index.js';
 
 class ToggleSwitchStory extends React.Component {
 

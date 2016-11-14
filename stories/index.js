@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import './stories.css';
 import Button from './Button';
-import Welcome from './Welcome';
 import Input from './Input';
 import Checkbox from './Checkbox';
 import ToggleSwitch from './ToggleSwitch';

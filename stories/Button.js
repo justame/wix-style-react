@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../src/Button/Button.js';
+import {Button} from '../src/index.js';
 
 export default () => {
     return (
