@@ -9,31 +9,38 @@ export default () => {
             <p>General Buttons</p>
 
             <div style={{width:'400px'}}>
-                <Button style={'fullblue'}>Click Me!</Button>
+                <Button style={'fullblue'}><div>Click Me!</div></Button>
             </div>
 
             <h3>Attributes</h3>
             <table className='attributes'>
-                <tr>
-                    <th>Attribute name</th>
-                    <th>Value</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>style</td>
-                    <td>fullblue, emptyblue, fullpurple, emptypurple, fullgreen, emptygreen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>disabled</td>
-                    <td>boolean</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>onClick</td>
-                    <td>function</td>
-                    <td></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <th>Attribute name</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>fullblue, emptyblue, fullpurple, emptypurple, fullgreen, emptygreen, fullred, emptyred</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>number - 30, 36, 42 are the standard</td>
+                        <td>Default is 36</td>
+                    </tr>
+                    <tr>
+                        <td>disabled</td>
+                        <td>boolean</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>onClick</td>
+                        <td>function</td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
 
             <h3>Usage Examples</h3>
@@ -86,6 +93,10 @@ export default () => {
             Active: <Button style={'emptyred'} active={true} >Click Me!</Button>
             Disabled: <Button style={'emptyred'} disabled={true} >Click Me!</Button>
 
+            <h4>Heights</h4>
+            30: <Button height={30}>Click Me!</Button>
+            36: <Button height={36}>Click Me!</Button>
+            42: <Button height={42}>Click Me!</Button>
         </div>
     )
 }
