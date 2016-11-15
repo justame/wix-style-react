@@ -10,6 +10,8 @@
     "build": ":",
     "release": "npm install @wix/wnpm-ci && wnpm-release -- --no-shrinkwrap",
     "storybook": "start-storybook -p 6006",
+    "lint": "eslint test/ src/",
+    "pretest": "npm run lint -s",
     "build-storybook": "build-storybook"
   },
   "repository": {

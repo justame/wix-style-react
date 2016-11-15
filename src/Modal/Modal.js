@@ -4,7 +4,7 @@ import Button from '../Button/Button.js';
 import styles from './Modal.less';
 import SvgX from '../svg/X.js';
 
-const Modal = props => {
+function Modal(props) {
     const modalStyles = {
         overlay : {
             // Overriding defaults
@@ -19,7 +19,7 @@ const Modal = props => {
             display         : 'flex',
             justifyContent  : 'center',
             alignItems      : 'flex-start',
-            overflowY       : 'auto',
+            overflowY       : 'auto'
         },
         content : {
             // Overriding defaults
@@ -36,7 +36,7 @@ const Modal = props => {
             padding                 : '0px',
             // Overriding defaults - END
             backgroundColor         : 'transparent',
-            marginBottom            : '0px',
+            marginBottom            : '0px'
         }
     };
 
@@ -74,7 +74,7 @@ const Modal = props => {
             </div>
         </ReactModal>
     );
-};
+}
 
 Modal.propTypes = {
     isOpen         : React.PropTypes.bool.isRequired,
@@ -83,33 +83,36 @@ Modal.propTypes = {
     confirmText    : React.PropTypes.string,
     cancelText     : React.PropTypes.string,
     onOk           : React.PropTypes.func,
-    className      : React.PropTypes.string,
     style          : React.PropTypes.oneOf([null, 'red', 'blue', 'green', 'lightGreen']),
     title          : React.PropTypes.node,
+    zIndex         : React.PropTypes.number,
+    children       : React.PropTypes.any
 };
 
 Modal.defaultProps = {
     onOk      : () => {},
-    style     : 'blue',
+    style     : 'blue'
 };
 
 // ----------------------------------------------------------------------
 
-const Footer = props => (
-    <div className={styles.footer} >
-        {props.children}
-        <div className = {styles.footerbuttons}>
-            {props.cancelText && (
-                <Button style={'empty'+props.style} onClick={props.onCancel} >
-                    {props.cancelText}
+function Footer(props) {
+    return (
+        <div className={styles.footer} >
+            {props.children}
+            <div className = {styles.footerbuttons}>
+                {props.cancelText && (
+                    <Button style={'empty'+props.style} onClick={props.onCancel} >
+                        {props.cancelText}
+                    </Button>
+                )}
+                <Button style={'full'+props.style} onClick={props.onOk} >
+                    {props.confirmText}
                 </Button>
-            )}
-            <Button style={'full'+props.style} onClick={props.onOk} >
-                {props.confirmText}
-            </Button>
+            </div>
         </div>
-    </div>
-);
+    );
+}
 
 Footer.propTypes = {
     confirmText : React.PropTypes.string,
@@ -117,6 +120,7 @@ Footer.propTypes = {
     onCancel    : React.PropTypes.func,
     onOk        : React.PropTypes.func,
     style       : React.PropTypes.string,
+    children    : React.PropTypes.any
 };
 
 Footer.defaultProps = {

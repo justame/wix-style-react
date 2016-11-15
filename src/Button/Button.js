@@ -38,5 +38,6 @@ Button.propTypes = {
     hover: React.PropTypes.bool,
     active: React.PropTypes.bool,
     disabled: React.PropTypes.bool,
-    onClick: React.PropTypes.func
+    onClick: React.PropTypes.func,
+    children: React.PropTypes.any
 }

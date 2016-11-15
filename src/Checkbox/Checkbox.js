@@ -39,12 +39,13 @@ class Checkbox extends React.Component {
     }
 }
 
-Checkbox.propType = {
+Checkbox.propTypes = {
     checked: React.PropTypes.bool.isRequired,
     disabled: React.PropTypes.bool,
     onChange: React.PropTypes.func.isRequired,
     hover: React.PropTypes.bool,        // FOR AUTOMATIC TESTING
-    active: React.PropTypes.bool        // FOR AUTOMATIC TESTING
+    active: React.PropTypes.bool,       // FOR AUTOMATIC TESTING
+    children: React.PropTypes.any
 };
 
 Checkbox.defaultProps = {

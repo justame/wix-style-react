@@ -8,16 +8,14 @@ class Input extends React.Component {
     render() {
 
         const {
-            extraClasses,
             value,
             forceHover,
             forceFocus,
             placeholder,
             error,
             unit,
-            colorStyle,
             defaultValue,
-            tabIndex,
+            tabIndex
         } = this.props;
 
         const inputClasses = forceFocus ? styles.focus : forceHover ? styles.hover : '';
@@ -29,9 +27,7 @@ class Input extends React.Component {
         const classes = classNames({
             [styles.input]            : true,
             [styles.error]            : !!error,
-            [styles.inputWithUnit]    : !!unit,
-            [styles[colorStyle]]      : true,
-            [extraClasses]            : true
+            [styles.inputWithUnit]    : !!unit
         });
 
         return (
@@ -55,7 +51,19 @@ class Input extends React.Component {
             </div>
         );
     }
+}
 
+Input.displayName = 'Input';
+
+Input.propTypes = {
+    value: React.PropTypes.string,
+    forceHover: React.PropTypes.bool,
+    forceFocus: React.PropTypes.bool,
+    placeholder: React.PropTypes.string,
+    error: React.PropTypes.bool,
+    unit: React.PropTypes.string,
+    defaultValue: React.PropTypes.string,
+    tabIndex: React.PropTypes.number
 }
 
 export default Input;
