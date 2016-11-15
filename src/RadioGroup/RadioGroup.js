@@ -32,6 +32,9 @@ class RadioGroup extends React.Component {
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.propTypes = {
+    onChange:       React.PropTypes.func.required,
+    value:          React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number ]),
+    children:       React.PropTypes.any
 }
 RadioGroup.defaultProps = {
 }
@@ -88,12 +91,14 @@ class RadioButton extends React.Component {
 
 RadioButton.displayName = 'RadioGroup.Button';
 RadioButton.propTypes = {
+    value:          React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number ]),
+    vAlign:         React.PropTypes.oneOf(['center', 'top']).isRequired,
+    children:       React.PropTypes.any
 }
 RadioButton.defaultProps = {
     vAlign: 'center'
 }
 RadioButton.contextTypes = {
-    vAlign:         React.PropTypes.oneOf(['center', 'top']).isRequired,
     radioOnChange : React.PropTypes.func,
     radioId :       React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number ]),
     radioSelected : React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]) 
