@@ -3,8 +3,6 @@ import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 class Checkbox extends React.Component {
     constructor() {
         super();
@@ -12,7 +10,7 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        const {checked, disabled, hover, active, onClick} = this.props;
+        const {checked, disabled, hover, active, onChange} = this.props;
 
         let classname = classNames({
             [styles.wrapper]         : true,
@@ -25,7 +23,7 @@ class Checkbox extends React.Component {
 
         return (
             <div className={classname} >
-                <input type='checkbox' id={this.id} checked={checked} disabled={disabled} onClick={onClick} />
+                <input type='checkbox' id={this.id} checked={checked} disabled={disabled} onChange={onChange} />
                 <label htmlFor={this.id}>
                     <div className={styles.checkbox}>
                         <div className={styles.inner}> 
@@ -39,19 +37,21 @@ class Checkbox extends React.Component {
             </div>
         );
     }
-
 }
 
 Checkbox.propType = {
-    checked: React.PropTypes.bool,
+    checked: React.PropTypes.bool.isRequired,
     disabled: React.PropTypes.bool,
+    onChange: React.PropTypes.func.isRequired,
     hover: React.PropTypes.bool,        // FOR AUTOMATIC TESTING
     active: React.PropTypes.bool        // FOR AUTOMATIC TESTING
+};
+
+Checkbox.defaultProps = {
+    checked: false,
+    onChange: () => {}
 };
 
 Checkbox.displayName = 'Checkbox';
 
 export default Checkbox;
-
-//    shouldComponentUpdate(nextProps, nextState, nextContext) {
-//        return sharedLogic.$shouldComponentUpdate.bind(this)(arguments);
