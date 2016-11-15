@@ -6,6 +6,7 @@ import Input from './Input';
 import Checkbox from './Checkbox';
 import RadioGroup from './RadioGroup';
 import ToggleSwitch from './ToggleSwitch';
+import Select from './Select';
 import Modal from './Modal';
 
 storiesOf('Components', module)
@@ -23,6 +24,9 @@ storiesOf('Components', module)
   ))
   .add('ToggleSwitch', () => (
       <ToggleSwitch />
+  ))
+  .add('Select', () => (
+      <Select />
   ))
   .add('Modal', () => (
       <Modal />
