@@ -4,6 +4,7 @@ import './stories.css';
 import Button from './Button';
 import Input from './Input';
 import Checkbox from './Checkbox';
+import RadioGroup from './RadioGroup';
 import ToggleSwitch from './ToggleSwitch';
 import Modal from './Modal';
 
@@ -16,6 +17,9 @@ storiesOf('Components', module)
   ))
   .add('Checkbox', () => (
       <Checkbox />
+  ))
+  .add('RadioGroup', () => (
+      <RadioGroup />
   ))
   .add('ToggleSwitch', () => (
       <ToggleSwitch />

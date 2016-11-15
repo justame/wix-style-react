@@ -1,0 +1,74 @@
+@import (reference) '../common.less';
+
+.wrapper
+{
+    display:inline-block;
+}
+
+.wrapper, .wrapper > *
+{
+    cursor:pointer;
+    box-sizing:border-box;
+}
+
+.wrapper > input 
+{
+    display: none;
+}
+
+.wrapper > label
+{
+    display: flex;
+}
+
+:global(.ltr) .wrapper > label {
+    flex-direction: row;
+}
+
+:global(.rtl) .wrapper > label {
+    flex-direction: row-reverse;
+}
+
+.wrapper > label.vcenter
+{
+    align-items: center;
+}
+
+.wrapper > label.vtop
+{
+    align-items: top;
+}
+
+:global(.ltr) .children
+{
+    padding-left: 12px;
+}
+
+:global(.rtl) .children
+{
+    padding-right: 12px;
+}
+
+.radio
+{
+    box-sizing: border-box;
+    display: inline-block;
+    position:relative;
+    width: 17px;
+    height: 17px;
+    border: 1px solid @B10;
+    border-radius: 50%;
+}
+
+.radio.checked:after
+{
+    content:' ';
+    display: block;
+    border-radius: 50%;
+    background-color: @B10;
+    width: 11px;
+    height: 11px;
+    top:0px;
+    left:0px;
+    margin:2px;
+}
