@@ -55,17 +55,17 @@ class CheckboxStory extends React.Component {
                 <h3>Usage Examples</h3>
                 <h4>LTR</h4>
                 <div className='ltr'>
-                    <Checkbox checked={false}><div>Hello World (checked=false)</div></Checkbox>
-                    <Checkbox checked={true}><div>Hello World (checked=true)</div></Checkbox>
-                    <Checkbox disabled={true} checked={false}><div>Hello World (disabled=true & checked=false)</div></Checkbox>
-                    <Checkbox disabled={true} checked={true}><div>Hello World (disbaled=true & checked=true)</div></Checkbox>
+                    <div><Checkbox checked={false}><div>Hello World (checked=false)</div></Checkbox></div>
+                    <div><Checkbox checked={true}><div>Hello World (checked=true)</div></Checkbox></div>
+                    <div><Checkbox disabled={true} checked={false}><div>Hello World (disabled=true & checked=false)</div></Checkbox></div>
+                    <div><Checkbox disabled={true} checked={true}><div>Hello World (disbaled=true & checked=true)</div></Checkbox></div>
                 </div>
                 <h4>RTL</h4>
                 <div className='rtl' style={{width:'200px'}} >
-                    <Checkbox checked={false}><div>שלום עולם</div></Checkbox>
-                    <Checkbox checked={true}><div>שלום עולם</div></Checkbox>
-                    <Checkbox disabled={true} checked={false}><div>שלום עולם</div></Checkbox>
-                    <Checkbox disabled={true} checked={true}><div>שלום עולם</div></Checkbox>
+                    <div><Checkbox checked={false}><div>שלום עולם</div></Checkbox></div>
+                    <div><Checkbox checked={true}><div>שלום עולם</div></Checkbox></div>
+                    <div><Checkbox disabled={true} checked={false}><div>שלום עולם</div></Checkbox></div>
+                    <div><Checkbox disabled={true} checked={true}><div>שלום עולם</div></Checkbox></div>
                 </div>
 
             </div>
