@@ -25,3 +25,6 @@ Exclamation.propTypes = {
     height: React.PropTypes.number.isRequired,
     color: React.PropTypes.string.isRequired
 }
+Exclamation.defaultProps = {
+    color: 'white'
+}

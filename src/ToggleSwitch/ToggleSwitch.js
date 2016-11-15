@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import styles from './ToggleSwitch.less';
 
-class ToggleSwitch extends React.component {
+class ToggleSwitch extends React.Component {
 
     constructor(params) {
         super(params);
@@ -10,12 +10,12 @@ class ToggleSwitch extends React.component {
     }
     
     render() {
-        const {checked, onClick} = this.props;
+        const {checked, onChange} = this.props;
         const id = this.id;
 
         return (
             <div className={styles.toggleSwitch}>
-                <input type='checkbox' id={id} checked={checked} onClick={onClick} />
+                <input type='checkbox' id={id} checked={checked} onChange={onChange} />
                 <label htmlFor={id} className={styles.outerLabel}>
                     <label htmlFor={id} className={styles.innerLabel}>
                         <svg className={styles.toggleActive} viewBox="0 0 41 32">
@@ -34,9 +34,11 @@ class ToggleSwitch extends React.component {
 ToggleSwitch.displayName = 'ToggleSwitch';
 ToggleSwitch.propTypes = {
     checked: React.PropTypes.bool.isRequired,
-    onClick: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired
 }
 ToggleSwitch.defaultProps = {
     checked: false,
-    onClick: () => {}
+    onChange: () => {}
 }
+
+export default ToggleSwitch;

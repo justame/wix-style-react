@@ -54,7 +54,7 @@ function Modal(props) {
                 <div className={styles.header} >
                     {props.title}
                     <button className={styles.close} onClick={props.onCancel}>
-                        <SvgX width = {9} height = {9} thickness = {1}/>
+                        <SvgX width = {9} height = {9} thickness = {1} color={'white'} />
                     </button>
                 </div>
 
