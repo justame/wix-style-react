@@ -1,7 +1,7 @@
 {
   "name": "wix-style-react",
   "description": "wix-style-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "./src/index.js",
   "scripts": {
     "test": "mocha --require spec/setup.js \"spec/**/*.spec.js\"",
