@@ -1,5 +1,5 @@
 {
-  "name": "@wix/wix-style-react",
+  "name": "wix-style-react",
   "description": "wix-style-react",
   "version": "1.0.0",
   "main": "./src/index.js",
