@@ -110,15 +110,29 @@
 
 .input.error:after {
     top: 7px;
-    END: 8px;
     display:block;
+}
+
+:global(.ltr) .input.error:after {
+    right: 8px;
+}
+
+:global(.rtl) .input.error:after {
+    left: 8px;
 }
 
 .input.error > input {
     border-color: @R10 !important;
-    padding-END: 36px;
     border-width: 1px;
     box-shadow: inset 0px 0px 5px 0px fade(@R10, 60%);
+}
+
+:global(.ltr) .input.error > input {
+    padding-right: 36px;
+}
+
+:global(.rtl) .input.error > input {
+    padding-left: 36px;
 }
 
 .input.error > svg {
