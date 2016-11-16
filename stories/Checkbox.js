@@ -12,7 +12,7 @@ class CheckboxStory extends React.Component {
         return (
             <div style={{width:'900px'}}>
 
-                <h2>Checkbox <small style={{fontSize:'11px'}}><a target='_blank' href='https://github.com/wix-private/wix-style-react/blob/master/stories/Checkbox.js'>source</a></small></h2>
+                <h2>Checkbox <small style={{fontSize:'11px'}}><a target='_blank' href='https://github.com/wix/wix-style-react/blob/master/stories/Checkbox.js'>source</a></small></h2>
                 <p>Controlled checkbox</p>
 
                 <div style={{width:'400px'}} className='ltr'>

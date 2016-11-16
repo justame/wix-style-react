@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix-private/wix-style-react.git"
+    "url": "git+https://github.com/wix/wix-style-react.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix-private/wix-style-react/issues"
+    "url": "https://github.com/wix/wix-style-react/issues"
   },
-  "homepage": "https://github.com/wix-private/wix-style-react#readme",
+  "homepage": "https://github.com/wix/wix-style-react#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-deployer": "^1.2.0",

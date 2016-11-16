@@ -12,7 +12,7 @@ class ModalStory extends React.Component {
         return (
             <div style={{width:'900px'}}>
 
-                <h2>Modal Box <small style={{fontSize:'11px'}}><a target='_blank' href='https://github.com/wix-private/wix-style-react/blob/master/stories/Modal.js'>source</a></small></h2>
+                <h2>Modal Box <small style={{fontSize:'11px'}}><a target='_blank' href='https://github.com/wix/wix-style-react/blob/master/stories/Modal.js'>source</a></small></h2>
 
                 <div style={{width:'400px'}}>
 

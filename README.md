@@ -2,7 +2,7 @@
 'Wix Style' is a common name to the different UX style libraries designed by the UX guild (for dashboard, settings, editor, and viewer). The wix-style-react package contains React implemenations for the different components in the style library.
 
 ## Demo
-Storybook can be seen [here](https://wix-private.github.io/wix-style-react/).
+Storybook can be seen [here](https://wix.github.io/wix-style-react/).
 
 ## Getting Started
 ### Storybook
@@ -14,14 +14,14 @@ Storybook will allow you to see all the different components implemented, and th
 ### Using in a Project
 #### Install the npm
 ```
-    npm install --save @wix/wix-style-react
+    npm install --save wix-style-react
 ```
 #### Update webpack 
-The files are brough 'uncompiled' and 'unpacked'. You will need to make sure webpack standard loaders run on this project by adding 'node_modules/@wix/wix-style-react/src' to your loaders' include array, for example:
+The files are brough 'uncompiled' and 'unpacked'. You will need to make sure webpack standard loaders run on this project by adding 'node_modules/wix-style-react/src' to your loaders' include array, for example:
 ```javascript
     {
         test: /\.less$/,
-        include:['node_modules/@wix/wix-style-react/src')],
+        include:['node_modules/wix-style-react/src')],
         loaders: [
             'style-loader',
             'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
@@ -32,7 +32,7 @@ The files are brough 'uncompiled' and 'unpacked'. You will need to make sure web
 ```
 #### Use in your code
 ```javascript
-    import * as WixStyle from '@wix/wix-style-react';
+    import * as WixStyle from 'wix-style-react';
 
     export default (props) => {
         return (
@@ -42,7 +42,7 @@ The files are brough 'uncompiled' and 'unpacked'. You will need to make sure web
 ```
 Optimization: If you prefer to include only specific elements, you can do so by:
 ```javascript
-    import Button from '@wix/wix-style-react/src/Button';
+    import Button from 'wix-style-react/src/Button';
 
     export default (props) => {
         return (
