@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "lint": "eslint test/ src/",
     "pretest": "npm run lint -s",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/wix-private/wix-style-react#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-deployer": "^1.2.0",
     "babel-core": "~6.5.0",
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",

@@ -5,7 +5,7 @@ export default () => {
     return (
         <div style={{width:'900px'}}>
 
-            <h2>Input</h2>
+            <h2>Input <small style={{fontSize:'11px'}}><a target='_blank' href='https://github.com/wix-private/wix-style-react/blob/master/stories/Input.js'>source</a></small></h2>
             <p>General input container.</p>
 
             <div style={{width:'400px'}}>
