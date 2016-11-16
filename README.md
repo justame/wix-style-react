@@ -2,7 +2,7 @@
 'Wix Style' is a common name to the different UX style libraries designed by the UX guild (for dashboard, settings, editor, and viewer). The wix-style-react package contains React implemenations for the different components in the style library.
 
 ## Demo
-Storybook can be seen (https://wix-private.github.io/wix-style-react/)[here].
+Storybook can be seen [here](https://wix-private.github.io/wix-style-react/).
 
 ## Getting Started
 ### Storybook
